@@ -29,7 +29,10 @@ export const ProjectsPage = () => {
 
     return !isLoaded ? 
         (
-            <LoaderComponent />
+            <>
+                <Headline maintitle={"Projects"} subtitle={"Projects"}/>
+                <LoaderComponent />
+            </>
         )
     :
         (

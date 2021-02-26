@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProjectsContainer, Container,  LinkContainer, A } from '../Styles/projects'
+import { GridContainer, Container,  LinkContainer, A } from '../Styles/projects'
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,11 +9,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const ProjectComponent = ({ projects }) => {
     return (
-        <ProjectsContainer>
+        <GridContainer>
             {
                  projects && projects.map((item) => (
                      <Container key={item.id}>
                          <h5>{item.name}</h5>
+                         <hr/>
                          <p>{item.description}</p>
                          <p>{item.languages}</p>
                          <LinkContainer>
@@ -27,6 +28,6 @@ export const ProjectComponent = ({ projects }) => {
                      </Container> 
                 ))
             }
-        </ProjectsContainer>
+        </GridContainer>
     )
 }

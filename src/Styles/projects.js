@@ -1,7 +1,7 @@
 import style from 'styled-components';
 
 
-export const ProjectsContainer = style.div`
+export const GridContainer = style.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;
@@ -25,7 +25,7 @@ export const Container = style.div`
     text-align: center;
     padding: 10px;
     height: 250px auto;
-    width: 250px;
+    width: 350px;
     background: #0381ff38;
     border-radius: 10px;
     border: 1px solid #2e344e;
