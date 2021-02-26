@@ -1,16 +1,41 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import { api } from '../Utils/api'
 import { Headline } from '../Component/Headline'
-import { Projects } from '../Styles/projects'
-import projects from '../Data/projectData'
+import { ProjectsContainer } from '../Styles/projects'
 import { ProjectComponent } from '../Component/ProjectComponent'
+import { LoaderComponent } from '../Component/LoaderComponent'
 
 export const ProjectsPage = () => {
-    return (
-        <>
-            <Headline maintitle={"Projects"} subtitle={"Projects"}/>
-            <Projects>
-                <ProjectComponent project={projects} />
-            </Projects>
-        </>
-    )
+    const [myProjects, setMyProjects] = useState([])
+    const [isLoaded, setIsLoaded] = useState(false)
+
+    useEffect( _ => {
+        async function fetchData(){
+            fetchProjects()
+        }
+
+        fetchData()
+    }, [])
+
+    const fetchProjects = async () => {
+        try {
+            const response = await api.get('project/')
+            setMyProjects(response.data.data)
+            setIsLoaded(true)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    return !isLoaded ? 
+        (
+            <LoaderComponent />
+        )
+    :
+        (
+            <>
+                <Headline maintitle={"Projects"} subtitle={"Projects"}/>
+                <ProjectComponent projects={myProjects} />    
+            </>
+        )
 }
