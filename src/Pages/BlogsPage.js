@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { BlogComponent } from '../Component/BlogComponent'
+import BlogComponent  from '../Component/BlogComponent'
 import { Headline } from '../Component/Headline'
 import { LoaderComponent } from '../Component/LoaderComponent'
 import { api } from '../Utils/api'
@@ -26,7 +26,6 @@ export const BlogsPage = () => {
         }
     }
  
-    console.log(myBlogs)
     return !isLoaded ? 
         (
             <>

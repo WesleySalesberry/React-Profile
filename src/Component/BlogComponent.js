@@ -1,15 +1,16 @@
 import React from 'react'
+import { Link, withRouter } from 'react-router-dom'
 import { IMG, Tag } from '../Styles/blogpage'
 import { Container, GridContainer } from '../Styles/projects'
 
-export const BlogComponent = ({ blogs }) => {
+const BlogComponent = ({ blogs }) => {
     return (
         <GridContainer>
             {
                 blogs && blogs.map((item, idx) => (
                     <Container key={item.id}>
                         <IMG src={item.image} alt="title image"/>
-                        <h1>{item.title}</h1>
+                        <Link to={`/blog-post/${item.id}`}><h1>{item.title}</h1></Link>
                         {/* TODO: Figure out how to end at the end of a word */}
                         <p>{
                             item.body.length > 200 ?
@@ -27,3 +28,5 @@ export const BlogComponent = ({ blogs }) => {
         </GridContainer>
     )
 }
+
+export default withRouter(BlogComponent)

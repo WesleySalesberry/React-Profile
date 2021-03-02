@@ -1,11 +1,11 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
-export const IMG = style.img`
+export const IMG = styled.img`
     height: 300px;
     width: 100%;
 `
 
-export const Tag = style.div`
+export const Tag = styled.div`
     background: #fff;
     color: #000;
     margin: 5px;
