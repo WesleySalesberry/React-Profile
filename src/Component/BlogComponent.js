@@ -1,13 +1,16 @@
 import React from 'react'
-import { Link, withRouter } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { IMG, Tag } from '../Styles/blogpage'
 import { Container, GridContainer } from '../Styles/projects'
+import { connect } from 'react-redux'
+import PropTypes from 'prop-types';
+import { Button } from '../Styles/CommentCardStyle'
 
-const BlogComponent = ({ blogs }) => {
+const BlogComponent = ({ blogs, auth: { isAuthenticated }}) => {
     return (
         <GridContainer>
             {
-                blogs && blogs.map((item, idx) => (
+                blogs && blogs.map((item) => (
                     <Container key={item.id}>
                         <IMG src={item.image} alt="title image"/>
                         <Link to={`/blog-post/${item.id}`}><h1>{item.title}</h1></Link>
@@ -20,6 +23,13 @@ const BlogComponent = ({ blogs }) => {
                         }</p>
                         
                            <Tag>{item.tags}</Tag>
+                           {
+                               isAuthenticated ? 
+                               <Button>Edit Blog</Button>
+                               :
+                               ""
+                           }
+
                         
                         
                     </Container>  
@@ -28,5 +38,12 @@ const BlogComponent = ({ blogs }) => {
         </GridContainer>
     )
 }
+BlogComponent.propTypes = {
+    auth: PropTypes.bool,
+}
 
-export default withRouter(BlogComponent)
+const mapStateToProps = state => ({
+    auth: state.auth
+})
+
+export default connect(mapStateToProps)(BlogComponent)

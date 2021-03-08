@@ -1,6 +1,6 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
-export const PostContainer = style.div`
+export const PostContainer = styled.div`
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -8,21 +8,21 @@ export const PostContainer = style.div`
     margin: 50px;
 `
 
-export const Image = style.img`
+export const Image = styled.img`
     width: 50%;
     height: 30vh;
     margin: 10px;
 `
-export const Tags = style.div` 
+export const Tags = styled.div` 
     display: flex;
     justify-content: center;
 `
 
-export const Body = style.p`
+export const Body = styled.p`
     margin: 10px;
 `
 
-export const CommentsContainer = style.div`
+export const CommentsContainer = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;

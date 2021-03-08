@@ -1,6 +1,6 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
-export const Home = style.div`
+export const Home = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;
@@ -8,20 +8,20 @@ export const Home = style.div`
     width: 80%;
 `;
 
-export const Hero =style.header`
+export const Hero =styled.header`
 `;
 
-export const HeroText =style.h1`
+export const HeroText =styled.h1`
     color: white;
     text-align: center;
     font-size: 3.6rem;
 `;
 
-export const HeroSubText =style.p`
+export const HeroSubText =styled.p`
     text-align: center;
 `;
 
-export const IconHolder = style.div`
+export const IconHolder = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,6 +1,6 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
-export const Title = style.div` 
+export const Title = styled.div` 
     text-transform: uppercase;
     font-size: 2rem;
     position: relative;
@@ -30,7 +30,7 @@ export const Title = style.div`
     }
 `
 
-export const Span = style.span`
+export const Span = styled.span`
     position: absolute;
     top: 15%;
     left: 0;

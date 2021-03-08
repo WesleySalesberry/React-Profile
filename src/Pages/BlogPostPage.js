@@ -6,8 +6,8 @@ import { LoaderComponent } from '../Component/LoaderComponent';
 import { Tag } from '../Styles/blogpage';
 import { PostContainer, Image, CommentsContainer } from '../Styles/blogpoststyle';
 import { api } from '../Utils/api'
-import {FaComment } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {FaComment } from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const BlogPostPage = () => {
     const [myPost, setPost] = useState([])

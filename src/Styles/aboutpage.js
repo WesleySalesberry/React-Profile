@@ -1,6 +1,6 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
-export const About = style.div`
+export const About = styled.div`
     position: absolute;
     top: 50%;
     left: 50%;

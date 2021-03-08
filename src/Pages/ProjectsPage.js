@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { api } from '../Utils/api'
 import { Headline } from '../Component/Headline'
-import { ProjectsContainer } from '../Styles/projects'
 import { ProjectComponent } from '../Component/ProjectComponent'
 import { LoaderComponent } from '../Component/LoaderComponent'
 
@@ -38,7 +37,7 @@ export const ProjectsPage = () => {
         (
             <>
                 <Headline maintitle={"Projects"} subtitle={"Projects"}/>
-                <ProjectComponent projects={myProjects} />    
+                <ProjectComponent key={myProjects.id} projects={myProjects} />    
             </>
         )
 }

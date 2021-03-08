@@ -1,6 +1,6 @@
-import style, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 
-export const LoaderContainer = style.div`
+export const LoaderContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,8 +1,8 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
-export const AppStyle = style.div`
+export const AppStyle = styled.div`
 `
-export const MainContent = style.div`
+export const MainContent = styled.div`
     width: 84%;
     margin-left: 16%;
     background-color: #10121B;
@@ -17,7 +17,7 @@ export const MainContent = style.div`
         }
 `;
 
-export const Content = style.div`
+export const Content = styled.div`
      margin: 5rem 15rem;
     @media screen and (max-width: 1100px){
             margin: 2rem 10rem;
@@ -41,7 +41,7 @@ export const Content = style.div`
         }
 `
 
-export const Sidebar = style.div`
+export const Sidebar = styled.div`
     width: 16%;
     height: 100vh;
     background-color: #191D2B;
@@ -67,7 +67,7 @@ export const Sidebar = style.div`
         }
 `;
 
-export const NavBTN = style.div`
+export const NavBTN = styled.div`
     position: absolute;
     z-index: 10;
     right: 10%;

@@ -1,7 +1,7 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
 
-export const GridContainer = style.div`
+export const GridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 1rem;
@@ -21,7 +21,7 @@ export const GridContainer = style.div`
 
 `
 
-export const Container = style.div`
+export const Container = styled.div`
     text-align: center;
     padding: 10px;
     height: 250px auto;
@@ -30,7 +30,7 @@ export const Container = style.div`
     border-radius: 10px;
     border: 1px solid #2e344e;
 ` 
-export const LinkContainer = style.div`
+export const LinkContainer = styled.div`
     display: flex;
     justify-content: space-around;
     
@@ -55,7 +55,7 @@ export const LinkContainer = style.div`
     }
 `
 
-export const A = style.a`
+export const A = styled.a`
     text-decoration: none;
     
 `

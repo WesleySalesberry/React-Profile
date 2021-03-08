@@ -1,13 +1,11 @@
 import axios from 'axios';
 
-
 export const api = axios.create({
     baseURL: 'https://profile-blog-api.herokuapp.com/api/v1/',
     headers:{
         'Content-Type': 'application/json'
-    }
+    },
 })
-
 
 export const getProjects = async () => {
     try {

@@ -1,12 +1,12 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 
-export const Navbar = style.div`
+export const Navbar = styled.div`
     height: 100vh;
     width: 25%
     border-right: 1px solid #2e344e;
 `;
 
-export const Nav = style.nav`
+export const Nav = styled.nav`
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,25 +14,24 @@ export const Nav = style.nav`
     height: 100%;
 `
 
-export const Profile = style.div`
+export const Profile = styled.div`
     margin: 1rem;
-    text-algin: center;
     border-bottom: 1px solid #2e344e;
     width: 100%;
 `
 
-export const IMG = style.img`
+export const IMG = styled.img`
     width: 100%;
     border-radius: 100%;
     border: 5px solid #2e344e;
     margin-bottom: 1rem;
 `
 
-export const NavItem = style.ul`
+export const NavItem = styled.ul`
     width: 100%;
 `
 
-export const NavItems = style.li`
+export const NavItems = styled.li`
     list-style: none;
     text-align: center;
     
@@ -62,7 +61,7 @@ export const NavItems = style.li`
         }
 `;
 
-export const Footer = style.footer`
+export const Footer = styled.footer`
     width: 100%;
     border-top: 1px solid #2e344e;
 
