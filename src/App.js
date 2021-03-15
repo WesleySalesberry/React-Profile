@@ -16,6 +16,7 @@ import { Page404 } from './Pages/Page404';
 import { LoginPage } from './Pages/LoginPage';
 import { DashboardPage } from './Pages/AuthenticatedPages/DashboardPage';
 import { UnpubBlogs } from './Pages/AuthenticatedPages/UnpubBlogs';
+import { ContactPage } from './Pages/ContactPage';
 
 
 function App() {
@@ -39,11 +40,12 @@ function App() {
         <Content>
           <Switch>
             <Route exact path="/" component={HomePage}/>
-            <Route exact path="/about" component={AboutPage}/>
-            <Route exact path="/projects" component={ProjectsPage}/>
-            <Route exact path="/blog" component={BlogsPage}/>
-            <Route exact path="/blog-post/:id" component={BlogPostPage}/>
+            <Route exact path="/who" component={AboutPage}/>
+            <Route exact path="/work" component={ProjectsPage}/>
+            <Route exact path="/ramblings" component={BlogsPage}/>
+            <Route exact path="/rambling-post/:id" component={BlogPostPage}/>
             <Route exact path="/admin" component={LoginPage}/>
+            <Route exact path="/contact" component={ContactPage}/>
             {/* TODO: make these private routes */}
             <PrivateRoutes exact path="/dashboard" component={DashboardPage}/>
             <PrivateRoutes exact path="/unpublished-blogs" component={UnpubBlogs}/>

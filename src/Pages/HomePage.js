@@ -8,9 +8,10 @@ export const HomePage = () => {
     return (
         <Home>
             <Hero>
-                <HeroText>Hi, I am <span>Wesley</span></HeroText>
+                <HeroText>Hi, I am <span>Wesley</span>.</HeroText>
+                <HeroText>I build things for the web.</HeroText>
             </Hero>
-            <HeroSubText>and I build solutions to complex problems</HeroSubText>
+            <HeroSubText>I'm a software engineer based in North Carolina specializing in building exceptional websites, applications, and everything in between.</HeroSubText>
             <IconHolder>
                 <a href="https://github.com/wesleySalesberry/" target="_blank" rel="noopener noreferrer" className="icons">
                     <FontAwesomeIcon icon={faGithub} className="github-icon" />

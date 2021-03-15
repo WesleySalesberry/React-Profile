@@ -8,18 +8,18 @@ import {logout} from '../Redux/auth/auth'
 const NavBar = ({logout, auth: { isAuthenticated, loading }}) => {
     const vistorLinks = (
         <NavItems>
-            <NavItem><NavLink to="/">Home</NavLink></NavItem>
-            <NavItem><NavLink to="/about">About</NavLink></NavItem>
-            <NavItem><NavLink to="/projects">Projects</NavLink></NavItem>
-            <NavItem><NavLink to="/blog">Blog</NavLink></NavItem>
-            <NavItem><NavLink to="">Contact</NavLink></NavItem>
+            <NavItem><NavLink to="/">Intro</NavLink></NavItem>
+            <NavItem><NavLink to="/who">Who</NavLink></NavItem>
+            <NavItem><NavLink to="/work">Work</NavLink></NavItem>
+            <NavItem><NavLink to="/ramblings">Ramblings</NavLink></NavItem>
+            <NavItem><NavLink to="/contact">Contact</NavLink></NavItem>
         </NavItems>
     )
     const adminLinks = (
         <NavItems>
             <NavItem><NavLink to="/dashboard">Dashboard</NavLink></NavItem>
-            <NavItem><NavLink to="/projects">Projects</NavLink></NavItem>
-            <NavItem><NavLink to="/blog">Blog</NavLink></NavItem>
+            <NavItem><NavLink to="/work">Projects</NavLink></NavItem>
+            <NavItem><NavLink to="/ramblings">Ramblings</NavLink></NavItem>
             <NavItem><NavLink to="/unpublished-blogs">Unpublished</NavLink></NavItem> 
             <NavItem><NavLink to="/" onClick={logout}>Logout</NavLink></NavItem> 
         </NavItems>
@@ -34,7 +34,7 @@ const NavBar = ({logout, auth: { isAuthenticated, loading }}) => {
                     !loading && isAuthenticated ? adminLinks : vistorLinks
                 }
                 <Footer>
-                    <p>@Salesberry Media</p>
+                    <p>Wesley Salesberry</p>
                 </Footer>
             </Nav>
         </Navbar>

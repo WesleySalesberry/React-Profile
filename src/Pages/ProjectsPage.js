@@ -29,14 +29,14 @@ export const ProjectsPage = () => {
     return !isLoaded ? 
         (
             <>
-                <Headline maintitle={"Projects"} subtitle={"Projects"}/>
+                <Headline maintitle={"Work"} subtitle={"Work"}/>
                 <LoaderComponent />
             </>
         )
     :
         (
             <>
-                <Headline maintitle={"Projects"} subtitle={"Projects"}/>
+                <Headline maintitle={"Work"} subtitle={"Work"}/>
                 <ProjectComponent key={myProjects.id} projects={myProjects} />    
             </>
         )

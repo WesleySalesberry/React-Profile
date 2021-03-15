@@ -42,7 +42,7 @@ export const BlogPostPage = () => {
     :
         (
             <>
-                <Headline maintitle={`${myPost.title}`} subtitle={"Blog Post"}/>
+                <Headline maintitle={`${myPost.title}`} subtitle={"ramblings Post"}/>
                 <PostContainer>
                     <Image src={myPost.image} alt=""/>
                     <Tag>{ myPost.tags}</Tag>

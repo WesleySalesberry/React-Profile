@@ -7,9 +7,12 @@ import { HeroSubText } from '../Styles/homepage'
 export const AboutPage = () => {
     return (
         <div>
-            <Headline maintitle={"about me"} subtitle={"about me"}/>
+            <Headline maintitle={"Who"} subtitle={"me"}/>
             <About>
-                <HeroSubText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aliquam provident laboriosam unde harum ipsa eius tempora eum, quia nostrum itaque ut, maiores distinctio ducimus aspernatur hic. Quasi, libero iste! Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis aliquam provident laboriosam unde harum ipsa eius tempora eum, quia nostrum itaque ut, maiores distinctio ducimus aspernatur hic. Quasi, libero iste!
+                <HeroSubText>
+                    <h3>Hello! I'm Wesley, a software engineer based in North Carolina.</h3>
+
+                    <p>I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.</p>
                 </HeroSubText>
             </About>
         </div>

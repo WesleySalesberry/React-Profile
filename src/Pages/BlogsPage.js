@@ -29,15 +29,20 @@ export const BlogsPage = () => {
     return !isLoaded ? 
         (
             <>
-                <Headline maintitle={"Blogs"} subtitle={"Blogs"}/>
+                <Headline maintitle={"ramblings"} subtitle={"ramblings"}/>
                 <LoaderComponent />
             </>
         )
     :
         (
             <>
-                <Headline maintitle={"Blogs"} subtitle={"Blogs"}/>
-                <BlogComponent blogs={myBlogs}/>
+                <Headline maintitle={"ramblings"} subtitle={"ramblings"}/>
+                {
+                    myBlogs.length !== 0 ? 
+                        <BlogComponent blogs={myBlogs}/>
+                        :
+                        <h1>No rambles currently</h1>
+                }
             </>
         )
 }
