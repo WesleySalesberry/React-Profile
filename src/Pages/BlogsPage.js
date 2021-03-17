@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import BlogComponent  from '../Component/BlogComponent'
 import { Headline } from '../Component/Headline'
 import { LoaderComponent } from '../Component/LoaderComponent'
+import { LoaderContainer } from '../Styles/loadersStyle'
 import { api } from '../Utils/api'
 
 export const BlogsPage = () => {
@@ -41,7 +42,10 @@ export const BlogsPage = () => {
                     myBlogs.length !== 0 ? 
                         <BlogComponent blogs={myBlogs}/>
                         :
-                        <h1>No rambles currently</h1>
+                       <LoaderContainer>
+                           <h1>No rambles currently</h1>
+                       </LoaderContainer>
+                        
                 }
             </>
         )

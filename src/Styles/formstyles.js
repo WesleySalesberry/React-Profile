@@ -29,6 +29,13 @@ export const Input = styled.input`
     width: 90%;
     ${SharedInputStyles}
 `
+export const TextArea = styled.textarea`
+    display: block;
+    width: 90%;
+    min-height: 10vh;
+    resize: none;
+    ${SharedInputStyles}
+`
 
 export const Button = styled.button`
     display: block;
@@ -41,5 +48,14 @@ export const Button = styled.button`
     cursor: pointer;
     border: 1px solid #2e344e;
     box-sizing: border-box;
+`
+
+export const ErrorDiv = styled.div`
+    width: 90%;
+    border-radius: 5px;
+    text-align: center;
+    background-color: red;
+    color: white;
+
 `
 
